@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
+	var searchbarPosition = "center";
+
 	$("#submit").on("click", function() {
+		$("#feed").html('');
 		var searchTerm = document.getElementById("query").value;
 
 		var request = "https://en.wikipedia.org/w/api.php/w/api.php" +
@@ -16,9 +19,22 @@ $(document).ready(function() {
 		});
 
 		function successHandler(data) {
-			console.log(data);
+			var content = data.query.search;
+			content.forEach(function(item) {
+				var html = "<div class='entry'><h2 class='entryHeader'>";
+				html += item.title + "</h2>";
+				html += "<h3 class='snippetText'>" + item.snippet;
+				html += "</h3></div>";
+				$("#feed").append(html);
+			});
 		}
 
+		if (searchbarPosition === "center") {
+			$(".search").animate({
+				"marginTop": "-=130px",
+				"marginBottom": "-=110px"
+			});
+			searchbarPosition = "top";
+		}
 	});
-
 });

@@ -6,21 +6,26 @@
 		<script src="jquery.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script src="main.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:300,700" rel="stylesheet">
 	</head>
 
 	<body>
-		<header>
-			<h1>Browse Wikpedia</h1>
+		<header class="container primary">
+			<h1>Browse Wikipedia</h1>
 		</header>
 
-		<section>
-			<form>
-				<input type="text" id="query">
-				<a id="submit">Search!</a>
-			</form>
-		</section>
+		<section class="container">
 
-		<section id="feed">
+			<section class="search">
+				<form class="searchbar">
+					<input type="text" id="query" placeholder="let's learn something new...">
+				</form>
+				<a id="submit">Search!</a>
+			</section>
+
+			<section id="feed">
+			</section>
 
 		</section>
 
