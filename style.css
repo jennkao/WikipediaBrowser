@@ -143,14 +143,19 @@ button:focus {
 	font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.entry:hover {
+	border: 2px solid black;
+}
+
 .entryHeader {
 	font-size: 20px;
-	padding: 10px 0;
 	font-weight: bold;
+	color: black;
 }
 
 .snippetText {
 	font-size: 15px;
+	margin-top: 10px;
 }
 
 

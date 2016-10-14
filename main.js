@@ -21,8 +21,9 @@ $(document).ready(function() {
 		function successHandler(data) {
 			var content = data.query.search;
 			content.forEach(function(item) {
-				var html = "<div class='entry'><h2 class='entryHeader'>";
-				html += item.title + "</h2>";
+				var href = "https://en.wikipedia.org/wiki/" + item.title.replace(/\s/g, "_");
+				var html = "<div class='entry'><a class='entryHeader' href=" + href + ">";
+				html += item.title + "</a>";
 				html += "<h3 class='snippetText'>" + item.snippet;
 				html += "</h3></div>";
 				$("#feed").append(html);
