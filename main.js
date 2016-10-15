@@ -10,7 +10,7 @@ $(document).ready(function() {
 		"?action=query&format=json&list=search&utf8=1&origin=*&srsearch=" + 
 		searchTerm; 
 
-		$.ajax( {
+		$.ajax({
 			headers: { 'Api-User-Agent': 'mailto:jennkao92@gmail.com'},
 			url: request,
 			dataType: "json", 
